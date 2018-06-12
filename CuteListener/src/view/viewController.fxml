@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="gridpane" alignment="TOP_LEFT" hgap="10" styleClass="root" vgap="10" xmlns="http://javafx.com/javafx/8"
+ 	xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLAntController">
+ 
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+   <children>
+        <Label text="Board Width:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+       <TextField fx:id="width" GridPane.columnIndex="1" GridPane.rowIndex="0" /> 
+       
+        <Label text="Bord Height:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+       <TextField fx:id="height" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+       
+       <Label text="amount of ants:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+       <TextField fx:id="amountAnts" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+       
+       <Button alignment="BASELINE_RIGHT" onAction="#clickedOk" text="ok" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+       <Button alignment="BASELINE_RIGHT" onAction="#startAnt" text="Start" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+       <VBox fx:id="vBox" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+       <Canvas fx:id="canvas" height="600" width="600" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+   </children>
+    
+</GridPane>
